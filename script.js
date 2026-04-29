@@ -2,7 +2,11 @@
 const params = new URLSearchParams(window.location.search);
 const userId = params.get("id") || "unknown";
 
+<<<<<<< HEAD
 // Page load log
+=======
+// 🔹 Page load = CLICK TRACK
+>>>>>>> db5c2c21997d582c0561918b276fe63043cf7f64
 window.addEventListener("load", function () {
     db.collection("logs").add({
         userId: userId,
@@ -13,7 +17,11 @@ window.addEventListener("load", function () {
     .catch(err => console.error(err));
 });
 
+<<<<<<< HEAD
 // Form submit
+=======
+// 🔹 Form submit
+>>>>>>> db5c2c21997d582c0561918b276fe63043cf7f64
 document.getElementById("loginForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -30,6 +38,12 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
     .then(() => console.log("Submit logged"))
     .catch(err => console.error(err));
 
+<<<<<<< HEAD
     // 🔥 Redirect to warning page instead of alert
     window.location.href = "hacked.html";
+=======
+    alert("⚠️ This was a phishing awareness simulation!\n\nAlways verify links before entering sensitive data.");
+
+    window.location.href = "https://your-company-awareness-page.com";
+>>>>>>> db5c2c21997d582c0561918b276fe63043cf7f64
 });

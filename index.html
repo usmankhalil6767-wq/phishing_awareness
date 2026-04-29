@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<<<<<<< HEAD
 <meta charset="UTF-8">
 <title>HEC Secure Portal</title>
 
@@ -39,10 +40,54 @@ button {
     border: none;
 }
 </style>
+=======
+    <meta charset="UTF-8">
+    <title>HEC Secure Portal</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: url("bg.jpg") no-repeat center center/cover;
+            height: 100vh;
+        }
+
+        .overlay {
+            background: rgba(0,0,0,0.5);
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-box {
+            background: white;
+            padding: 30px;
+            width: 300px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: green;
+            color: white;
+            border: none;
+        }
+    </style>
+>>>>>>> db5c2c21997d582c0561918b276fe63043cf7f64
 </head>
 
 <body>
 
+<<<<<<< HEAD
 <div class="box">
     <h2>HEC Secure Portal</h2>
 
@@ -55,10 +100,27 @@ button {
 </div>
 
 <!-- Firebase -->
+=======
+<div class="overlay">
+    <div class="login-box">
+        <h2>HEC Secure Portal</h2>
+
+        <form id="loginForm">
+            <input type="text" id="userCNIC" placeholder="Enter CNIC">
+            <input type="text" id="userPhone" placeholder="Enter Phone Number">
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</div>
+
+<!-- 🔥 Firebase SDK -->
+>>>>>>> db5c2c21997d582c0561918b276fe63043cf7f64
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 
 <script>
+<<<<<<< HEAD
 const firebaseConfig = {
     apiKey: "YOUR_KEY",
     authDomain: "YOUR_DOMAIN",
@@ -67,6 +129,16 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
+=======
+  const firebaseConfig = {
+    apiKey: "AIzaSyBsImZuANmL8Zf2vgLKfrPeGWNA6JAmonw",
+    authDomain: "hec-phishing-awareness.firebaseapp.com",
+    projectId: "hec-phishing-awareness"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+>>>>>>> db5c2c21997d582c0561918b276fe63043cf7f64
 </script>
 
 <script src="script.js"></script>
